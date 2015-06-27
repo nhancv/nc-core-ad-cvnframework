@@ -5,10 +5,11 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.1.0'
+        classpath 'com.android.tools.build:gradle:1.2.3'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+        classpath 'me.tatarka:gradle-retrolambda:3.1.0'
     }
 }
-
 allprojects {
     repositories {
         jcenter()
@@ -17,11 +18,11 @@ allprojects {
 
 ext {
     // Version.
-    androidPluginVersion = '1.1.0'
-    retroLambdaVersion = '2.4.1'
+    androidPluginVersion = '1.2.3'
+    retroLambdaVersion = '3.1.0'
     androidAptVersion = '1.4'
 
-    androidSupportVersion = '21.0.3'
+    androidSupportVersion = '22.2.0'
     daggerVersion = '2.0'
     butterKnifeVerion = '6.1.0'
     timberVersion = '2.2.+'
@@ -40,9 +41,9 @@ ext {
     // Configuration.
     config = [
             minSdkVersion    : 14,
-            compileSdkVersion: 21,
-            buildToolsVersion: '21.1.2',
-            targetSdkVersion : 21
+            compileSdkVersion: 22,
+            buildToolsVersion: '22.0.1',
+            targetSdkVersion : 22
     ]
 
     plugin = [
