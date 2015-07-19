@@ -37,6 +37,7 @@ public class UsersFragment extends NetworkFragment implements UsersView {
     @Inject
     UsersAdapter adapter;
 
+    @Inject
     UsersPresenter presenter;
 
     @Override
@@ -58,7 +59,6 @@ public class UsersFragment extends NetworkFragment implements UsersView {
         setupLoading(rvUsers, vProgressBar);
         rvUsers.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         rvUsers.setAdapter(adapter);
-        presenter = new UsersPresenter();
     }
 
     @Override

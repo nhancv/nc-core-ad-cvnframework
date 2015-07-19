@@ -2,6 +2,8 @@ package cvnhan.android.mvp.presenter;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import cvnhan.android.mvp.model.User;
 import cvnhan.android.mvp.model.UserModel;
 import cvnhan.android.mvp.utils.RxHelper;
@@ -12,6 +14,10 @@ public class UsersPresenter implements BasePresenter<UsersView, UserModel> {
 
     private Subscription usersSubscription;
 
+    @Inject
+    public UsersPresenter(){
+
+    }
     @Override
     public void onStart(UsersView view, UserModel model) {
         view.showLoading(true);

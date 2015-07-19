@@ -14,4 +14,5 @@ public interface UsersComponent extends AbstractActivityComponent {
     void inject(UsersActivity activity);
 
     void inject(UsersFragment fragment);
+
 }
